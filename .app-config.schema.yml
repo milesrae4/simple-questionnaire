@@ -1,0 +1,74 @@
+type: object
+
+required:
+  - app
+  - database
+  - webServer
+
+properties:
+  app:
+    "$ref": "#/definitions/App"
+  database:
+    "$ref": "#/definitions/Database"
+  webServer:
+    "$ref": '#/definitions/WebServer'
+
+definitions:
+  App:
+    type: object
+    required:
+      - baseUrl
+    additionalProperties: false
+    properties:
+      baseUrl:
+        type: string
+        description: The Base URL Website for api requests
+  WebServer:
+    type: object
+    required:
+      - allowedOrigins
+      - port
+    additionalProperties: false
+    properties:
+      allowedOrigins:
+        description: List of allowed origins for CORS. Include '*' to allow all
+        items:
+          type: string
+        type: array
+      port:
+        description: Port that the web server will listen on
+        type: number
+  Database:
+    type: object
+    required:
+      - database
+      - host
+      - port
+      - user
+      - password
+    additionalProperties: false
+    properties:
+      host:
+        description: Hostname of the database server
+        format: hostname
+        type: string
+      port:
+        description: Port of the database server
+        maximum: 65535
+        minimum: 1
+        type: number
+      database:
+        description: Database name
+        minLength: 1
+        type: string
+      user:
+        description: Database user
+        minLength: 1
+        type: string
+      password:
+        description: Database password
+        type: string
+        secret: true
+      debug:
+        description: Whether we're in debug mode
+        type: boolean

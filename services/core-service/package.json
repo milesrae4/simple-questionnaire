@@ -1,0 +1,44 @@
+{
+  "name": "questionnaire-core-service",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist-types/index.d.ts",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "start:watch": "node-dev ./dist/index.js",
+    "build": "tsc -b",
+    "build:watch": "yarn build --watch",
+    "build:clean": "yarn clean && yarn build",
+    "clean": "rm -rf dist dist-types tsconfig.tsbuildinfo",
+    "config:generate": "yarn app-config gen",
+    "lint": "eslint --ext .ts src",
+    "migration:run": "NODE_ENV=dev knex --knexfile ./src/lib/knexfile.ts migrate:latest",
+    "migration:revert": "NODE_ENV=dev knex --knexfile ./src/lib/knexfile.ts migrate:rollback",
+    "migration:create": "NODE_ENV=dev knex --knexfile ./src/lib/knexfile.ts migrate:make -x ts"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.3.0",
+    "@lcdev/router": "^1.5.0",
+    "axios": "^0.27.2",
+    "@lcdev/app-config": "^2.0.0-alpha.11",
+    "knex": "^0.21.5",
+    "koa": "^2.13.4",
+    "path": "^0.12.7",
+    "pg": "^8.8.0",
+    "objection": "^2.2.3",
+    "questionnaire-shared": "*",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa__cors": "^3.3.0",
+    "@types/node": "16",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "node-dev": "^7.4.3"
+  }
+}

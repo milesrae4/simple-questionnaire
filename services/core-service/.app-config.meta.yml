@@ -1,0 +1,6 @@
+$extends: ../../.app-config.meta.yml
+
+generate:
+  - type: 'ts'
+    name: 'Config'
+    file: 'src/@types/app-config/index.d.ts'

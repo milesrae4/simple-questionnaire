@@ -1,0 +1,13 @@
+type: object
+
+required:
+  - app
+  - database
+  - webServer
+properties:
+  app:
+    $ref: '../../.app-config.schema.yml#/definitions/App'
+  database:
+    $ref: '../../.app-config.schema.yml#/definitions/Database'
+  webServer:
+    $ref: '../../.app-config.schema.yml#/definitions/WebServer'

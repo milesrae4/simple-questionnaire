@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "CommonJS",
+    "declaration": true,
+    "declarationDir": "./dist-types",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "composite": true,
+    "moduleResolution": "node",
+    "lib": ["esnext"],
+    "target": "es2017",
+    "strict": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "jsx": "preserve",
+    // "esModuleInterop": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "../../lib/shared" }]
+}

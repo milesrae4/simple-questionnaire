@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  database:
+    image: postgres:13-alpine
+    ports:
+      - "${APP_CONFIG_DATABASE_PORT:-5432}:5432"
+    environment:
+      - "POSTGRES_DB=${APP_CONFIG_DATABASE_DATABASE}"
+      - "POSTGRES_USER=${APP_CONFIG_DATABASE_USER}"
+      - "POSTGRES_PASSWORD=${APP_CONFIG_DATABASE_PASSWORD}"

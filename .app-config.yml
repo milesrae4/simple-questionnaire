@@ -1,0 +1,27 @@
+app:
+  baseUrl: 'localhost'
+
+webServer:
+  port:
+    $env:
+      default: 9002
+      prod: 80
+  allowedOrigins:
+    $env:
+      default:
+        - '*'
+      prod:
+        - '*'
+
+database:
+  $env:
+    prod:
+      host: localhost
+      port: 43312
+      database: questionnaire
+      debug: false
+    default:
+      host: localhost
+      port: 43312
+      database: questionnaire
+      debug: true

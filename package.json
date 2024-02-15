@@ -12,7 +12,7 @@
     "node": "16.20.2"
   },
   "dependencies": {
-    "@lcdev/app-config": "^2.0.0-alpha.11"
+    "@app-config/main": "2.8.7"
   },
   "scripts": {
     "start": "lerna run start --stream --parallel",
@@ -48,7 +48,6 @@
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
     "babel-eslint": "^10.1.0",
-    "@lcdev/app-config": "^2.0.0-alpha.11",
     "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^16.1.0",

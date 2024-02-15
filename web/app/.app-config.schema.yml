@@ -1,0 +1,17 @@
+type: object
+
+required:
+  - webUrl
+  - appServerUrl
+  - appServerPort
+
+properties:
+  webUrl:
+    type: string
+    description: React App URL With Port
+  appServerUrl:
+    type: string
+    description: React App URL Without Port
+  appServerPort:
+    type: number
+    description: React App Webserver Port

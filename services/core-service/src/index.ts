@@ -3,7 +3,7 @@ import * as cors from '@koa/cors';
 import { Router, propagateErrors, propagateValues, err } from '@lcdev/router';
 import Quiz from './routes/quiz';
 import { createServer, createLogger, getLogger } from './utils';
-import config, { loadConfig } from '@lcdev/app-config';
+import config, { loadConfig } from '@app-config/main';
 import { connect, Knexion } from './lib/database';
 
 const isProduction = process.env.NODE_ENV === 'production';

@@ -71,8 +71,10 @@ export default class QuizService {
 
       const questionAnswers = await this.questionRepo.getQuestionAnswers();
 
+      console.log(questionAnswers)
+
       const quizResults = questionAnswers.map(
-        ({ question_id: questionId, answer }) => {
+        ({ questionId, answer }) => {
           const quizAnswer = quizAnswers[questionId];
           const isCorrect = quizAnswer === answer;
 

@@ -1,4 +1,4 @@
-const { config, loadConfig } = require('@lcdev/app-config');
+const { config, loadConfig } = require('@app-config/main');
 
 const loadAppConfig = async () => {
   await loadConfig({ directory: '../../' });

@@ -33,7 +33,8 @@
     "lint": "eslint --ext .ts,.tsx src",
     "test": "react-scripts test --verbose --watchAll=false",
     "test:watch": "react-scripts test --verbose",
-    "test:coverage": "react-scripts test --verbose --coverage --watchAll=false"
+    "test:coverage": "react-scripts test --verbose --coverage --watchAll=false",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
